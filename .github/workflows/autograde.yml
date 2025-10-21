@@ -1,0 +1,48 @@
+name: Auto Grade Dart Assignment
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  autograde:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Dart
+      uses: dart-lang/setup-dart@v1
+      with:
+        sdk: stable
+    
+    - name: Install dependencies
+      run: dart pub get
+    
+    - name: Run tests
+      run: dart test
+    
+    - name: Run grading script
+      run: dart run grader.dart
+    
+    - name: Generate grade report
+      run: |
+        echo "# Assignment Grade Report" > GRADE_REPORT.md
+        echo "" >> GRADE_REPORT.md
+        echo "## Test Results" >> GRADE_REPORT.md
+        echo "" >> GRADE_REPORT.md
+        echo "\`\`\`" >> GRADE_REPORT.md
+        cat test_results.txt >> GRADE_REPORT.md
+        echo "\`\`\`" >> GRADE_REPORT.md
+        echo "" >> GRADE_REPORT.md
+        echo "## Grade Summary" >> GRADE_REPORT.md
+        echo "" >> GRADE_REPORT.md
+        cat grade_summary.txt >> GRADE_REPORT.md
+    
+    - name: Upload grade report
+      uses: actions/upload-artifact@v4
+      with:
+        name: grade-report
+        path: GRADE_REPORT.md

@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Question 1 - Basic Data Types & Functions",
+      "setup": "dart pub get",
+      "run": "dart test test/question1_test.dart",
+      "points": 10
+    },
+    {
+      "name": "Question 2 - Collections & Control Flow", 
+      "setup": "dart pub get",
+      "run": "dart test test/question2_test.dart",
+      "points": 15
+    },
+    {
+      "name": "Question 3 - Classes & Objects",
+      "setup": "dart pub get", 
+      "run": "dart test test/question3_test.dart",
+      "points": 20
+    },
+    {
+      "name": "Question 4 - Inheritance & Polymorphism",
+      "setup": "dart pub get",
+      "run": "dart test test/question4_test.dart", 
+      "points": 25
+    },
+    {
+      "name": "Question 5 - Advanced Features & Mixins",
+      "setup": "dart pub get",
+      "run": "dart test test/question5_test.dart",
+      "points": 30
+    }
+  ]
+}

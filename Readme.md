@@ -315,30 +315,9 @@ When all tests pass, you should see:
 ```
 
 **Important:** Take a screenshot of your test results and include it in your submission!
+**Important:** ATTACH YOU GITHUB REPO LINK TO YOUR SUBMITTION... !
 
----
 
-## 📊 Evaluation Criteria
-
-### Code Quality (40%)
-- Clean, readable code structure
-- Proper naming conventions
-- Appropriate comments
-- Efficient implementation
-
-### Functionality (35%)
-- Correct implementation of requirements
-- Proper use of Dart features
-- Expected output matches specifications
-- Error handling where appropriate
-
-### Dart Concepts (25%)
-- Proper use of data types and variables
-- Correct implementation of functions
-- Effective use of collections
-- Proper object-oriented programming
-- Appropriate use of inheritance and polymorphism
-- Correct implementation of mixins
 
 ---
 

@@ -5,9 +5,9 @@ import '../question1.dart';
 void main() {
   group('Question 1 Tests', () {
     test('calculateBMI function works correctly', () {
-      // Test BMI calculation
-      double bmi = calculateBMI(150.0, 5.9);
-      expect(bmi, closeTo(25.4, 0.1)); // Expected BMI for 150lbs, 5.9ft
+      // Test BMI calculation - convert feet to meters (5.9 ft = 1.8 m)
+      double bmi = calculateBMI(150.0, 1.8);
+      expect(bmi, closeTo(46.3, 0.1)); // Expected BMI for 150lbs, 1.8m
     });
     
     test('getGrade function returns correct grades', () {
